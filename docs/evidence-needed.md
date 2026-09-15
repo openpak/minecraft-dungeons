@@ -4,16 +4,16 @@ The design in `design.md` is built entirely on public documentation. No packet
 from a Minecraft Dungeons client has been observed. This is the ordered list of
 observations that would confirm it, narrow it, or kill it.
 
-Rules, from `shared-docs/online-compatibility-playbook.md` and the family
+Rules, from `docs/shared/online-compatibility-playbook.md` and the family
 conventions:
 
 - **One variable per run.** State the decision rule before the run, not after.
 - **Raw captures, logs, tokens and account data stay outside this repository.**
   Keep them under a research directory on the pool, not in `/tmp`; commit only
   sanitized conclusions.
-- **Emulator Launch Protocol** (`shared-docs/emulator-launch-protocol.md`)
+- **Emulator Launch Protocol** (`docs/shared/emulator-launch-protocol.md`)
   before killing or restarting any emulator instance. Use the shared host and
-  joiner personas via `shared-docs/scripts/launch-citron-{host,joiner}.sh` or
+  joiner personas via workspace `tools/launch-citron-{host,joiner}.sh` or
   `launch-ryujinx-{host,joiner}.sh` — no per-title profiles.
 - Stop early. **E1 alone can end this investigation**, in either direction.
 
