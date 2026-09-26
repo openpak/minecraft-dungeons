@@ -43,7 +43,7 @@ exist would be a lie in a shared document.
 
 ## Ground rules
 
-- Clean room. Read [`docs/clean-room-policy.md`](../../docs/clean-room-policy.md)
+- Clean room. Read [`docs/clean-room-policy.md`](https://github.com/openpak/docs/blob/main/clean-room-policy.md)
   before writing a line. Public protocol documentation, our own captures, and
   compatibly licensed code are the only inputs.
 - AGPL-3.0-only, English only, Go 1.25, no secrets in the repository.
