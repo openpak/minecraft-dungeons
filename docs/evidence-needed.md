@@ -87,10 +87,9 @@ telemetry, DLC entitlement, or a content feed we can ignore?
 
 **Method.** Redirect that one host to a local listener that logs metadata only
 (connection, SNI, byte counts, timing — never values), leaving every Microsoft
-host untouched. citron takes a per-title redirect hook in
-`src/core/hle/service/sockets/sfdnsres.cpp` behind an env var, matching the
-existing `OPENPAK_PHOTON_IP` / `OPENPAK_AMONGUS_IP` / `OPENPAK_CTR_AUTH_IP`
-pattern; Ryujinx needs no rebuild — it writes the console's
+host untouched. the retired Citron fork took per-title redirect hooks in
+`src/core/hle/service/sockets/sfdnsres.cpp` behind env vars (nothing reads them
+now); Harbor needs no rebuild — it writes the console's
 `atmosphere/hosts/default.txt` itself.
 
 **Decision rule.** The game blocks, retries, or refuses to progress when that

@@ -181,8 +181,7 @@ The shape follows what already works for the Switch:
   Items 1–4 are shared by every Microsoft cross-play title on every console.
   None of them are Dungeons.
 - The console-side plumbing is the existing rig: DNS redirection of
-  `login.live.com` and `*.xboxlive.com` (citron already has per-title
-  `OPENPAK_*_IP` redirect hooks in `sfdnsres.cpp`; Ryujinx has the
+  `login.live.com` and `*.xboxlive.com` (the console and Harbor use the
   declarative route table), a per-SNI certificate from our CA, and the CA
   trust patch. This is a known-good path — it is how the Switch adapter,
   Stardew and Outbound all got their traffic.
