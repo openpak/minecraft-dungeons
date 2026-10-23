@@ -1,5 +1,13 @@
 # Evidence needed
 
+> **Current Switch client (2026-10-13): Harbor**, at
+> `~/REPOS/Openpak/emulators/harbor`. Harbor is an independent
+> OpenPak project based on Eden. Citron, Ryujinx (desktop and Android), and
+> the former OpenPak Eden checkouts have been removed. References to those
+> forks below record historical evidence only: do not run their commands,
+> reinstall them, or select them for current work. Use Harbor's README and
+> current handoff for builds and testing; old results do not establish Harbor parity.
+
 The design in `design.md` is built entirely on public documentation. No packet
 from a Minecraft Dungeons client has been observed. This is the ordered list of
 observations that would confirm it, narrow it, or kill it.
