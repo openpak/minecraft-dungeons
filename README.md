@@ -37,13 +37,13 @@ and what is genuinely unknown.
    top of it — most likely a title profile and a test, not a server.
 
 Until one of those happens this repository stays as it is. No port block is
-claimed in [`ports.md`](../../ports.md); the third-party range 22600–22699 has
+claimed in [`ports.md`](https://docs.openpak.org/contributors/ports/); the third-party range 22600–22699 has
 room reserved for this title, and taking ten ports for a service that does not
 exist would be a lie in a shared document.
 
 ## Ground rules
 
-- Clean room. Read [`docs/clean-room-policy.md`](https://github.com/openpak/docs/blob/main/clean-room-policy.md)
+- Clean room. Read [clean-room policy](https://docs.openpak.org/contributors/clean-room/)
   before writing a line. Public protocol documentation, our own captures, and
   compatibly licensed code are the only inputs.
 - AGPL-3.0-only, English only, Go 1.25, no secrets in the repository.

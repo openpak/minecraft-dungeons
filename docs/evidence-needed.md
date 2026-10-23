@@ -12,14 +12,14 @@ The design in `design.md` is built entirely on public documentation. No packet
 from a Minecraft Dungeons client has been observed. This is the ordered list of
 observations that would confirm it, narrow it, or kill it.
 
-Rules, from `https://github.com/openpak/docs/blob/main/playbooks/online-compatibility-playbook.md` and the family
+Rules, from https://docs.openpak.org/contributors/online-compatibility/ and the family
 conventions:
 
 - **One variable per run.** State the decision rule before the run, not after.
 - **Raw captures, logs, tokens and account data stay outside this repository.**
   Keep them under a research directory on the pool, not in `/tmp`; commit only
   sanitized conclusions.
-- **Emulator Launch Protocol** (`https://github.com/openpak/docs/blob/main/playbooks/emulator-launch-protocol.md`)
+- **Emulator Launch Protocol** (internal research notes)
   before killing or restarting any emulator instance. Launch the fork
   directly; there are no per-title profiles and no persona launchers.
 - Stop early. **E1 alone can end this investigation**, in either direction.
