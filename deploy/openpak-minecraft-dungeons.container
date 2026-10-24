@@ -1,0 +1,22 @@
+# Example quadlet. Traefik terminates TLS for api.minecraftservices.com (console entrypoint,
+# -> :22690) and for signaling.minecraftservices.com on a 5443 entrypoint (-> :22691, websocket).
+[Unit]
+Description=OpenPak Minecraft Dungeons services (API stand-in, signaling relay)
+
+[Container]
+ContainerName=openpak-minecraft-dungeons
+Image=localhost/openpak-minecraft-dungeons:local
+Network=openpak.network
+# Response fixtures, re-read on every request: edit them while the game runs.
+Volume=%h/openpak/deploy/minecraft-dungeons/fixtures:/app/fixtures:ro,Z
+EnvironmentFile=%h/openpak/deploy/.env
+Environment=DUNGEONS_API_ADDR=:22690 DUNGEONS_SIGNAL_ADDR=:22691 DUNGEONS_HEALTH_ADDR=:22692
+Environment=DUNGEONS_TURN_URLS=stun:turn.minecraftservices.com:3478,turn:turn.minecraftservices.com:3478
+# DUNGEONS_SIGNAL_HELLO=/app/fixtures/signal-hello.json once the credential frame is known.
+HealthCmd=/dungeonsd healthcheck
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
