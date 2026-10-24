@@ -13,7 +13,7 @@ EnvironmentFile=%h/openpak/deploy/.env
 Environment=DUNGEONS_API_ADDR=:23520 DUNGEONS_SIGNAL_ADDR=:23521 DUNGEONS_HEALTH_ADDR=:23522
 Environment=DUNGEONS_TURN_URLS=stun:turn.minecraftservices.com:3478,turn:turn.minecraftservices.com:3478
 # DUNGEONS_SIGNAL_HELLO=/app/fixtures/signal-hello.json once the credential frame is known.
-HealthCmd=/dungeonsd healthcheck
+HealthCmd=["/dungeonsd","healthcheck"]
 
 [Service]
 Restart=always
