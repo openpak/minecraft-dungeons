@@ -33,7 +33,7 @@ func env(k, def string) string {
 
 func main() {
 	if len(os.Args) > 1 && os.Args[1] == "healthcheck" {
-		addr := env("DUNGEONS_HEALTH_ADDR", ":22692")
+		addr := env("DUNGEONS_HEALTH_ADDR", ":23522")
 		if strings.HasPrefix(addr, ":") {
 			addr = "127.0.0.1" + addr
 		}
@@ -91,10 +91,10 @@ func run(log *slog.Logger) error {
 		}()
 		return nil
 	}
-	if err := listen("api", env("DUNGEONS_API_ADDR", ":22690"), a); err != nil {
+	if err := listen("api", env("DUNGEONS_API_ADDR", ":23520"), a); err != nil {
 		return err
 	}
-	if err := listen("signal", env("DUNGEONS_SIGNAL_ADDR", ":22691"), r); err != nil {
+	if err := listen("signal", env("DUNGEONS_SIGNAL_ADDR", ":23521"), r); err != nil {
 		return err
 	}
 	hm := http.NewServeMux()
@@ -103,7 +103,7 @@ func run(log *slog.Logger) error {
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(map[string]any{"api": a.Seen(), "signal_live": r.Live()})
 	})
-	if err := listen("health", env("DUNGEONS_HEALTH_ADDR", ":22692"), hm); err != nil {
+	if err := listen("health", env("DUNGEONS_HEALTH_ADDR", ":23522"), hm); err != nil {
 		return err
 	}
 	select {

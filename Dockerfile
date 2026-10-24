@@ -11,6 +11,6 @@ RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -trimpath -buildvcs
 FROM gcr.io/distroless/static
 COPY --from=build /out/dungeonsd /dungeonsd
 USER nonroot:nonroot
-EXPOSE 22690 22691 22692
+EXPOSE 23520 23521 23522
 HEALTHCHECK CMD ["/dungeonsd", "healthcheck"]
 ENTRYPOINT ["/dungeonsd"]

@@ -7,20 +7,20 @@ on Nintendo Switch would have to be.
 serves the game's own online services while their shapes are learned from the
 game's traffic:
 
-- `:22690` api.minecraftservices.com stand-in: logs every request (method, path,
+- `:23520` api.minecraftservices.com stand-in: logs every request (method, path,
   query keys, header names, JSON body with credentials redacted) and answers
   from fixture files (`<method>_<path>.json`, re-read per request), else a
   default status.
-- `:22691` the WebRTC signaling websocket (`wss://signaling.minecraftservices.com:5443/ws`):
+- `:23521` the WebRTC signaling websocket (`wss://signaling.minecraftservices.com:5443/ws`):
   a generic relay (socket ids from the path or query, JSON frames with `To`
   forwarded with `From`), every frame logged with ICE passwords redacted, and an
   optional credential frame on connect filled from a TURN REST credential minted
   from the coturn secret (`VOICE_TURN_SECRET`).
-- `:22692` `/health` and `/seen` (endpoints hit so far).
+- `:23522` `/health` and `/seen` (endpoints hit so far).
 
 The Xbox identity, friends, presence, sessions and invites the game also needs
 are served by [openpak/xbl](https://github.com/openpak/xbl). Test plan:
-[docs/harbor-test-plan.md](docs/harbor-test-plan.md). Ports 22690-22699.
+[docs/harbor-test-plan.md](docs/harbor-test-plan.md). Ports 23520-23529.
 
 ## The finding
 
