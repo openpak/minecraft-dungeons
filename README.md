@@ -6,6 +6,7 @@ OpenPak's Minecraft Dungeons Server.
 | --- | --- |
 | Game | [Minecraft Dungeons](https://openpak.org/titles#t-22) |
 | Networks | Nintendo Switch |
+| Title ID | `01006C100EC08000` |
 | Licence | AGPL-3.0-only |
 
 ## Networks
@@ -37,6 +38,7 @@ go run ./cmd/dungeonsd
 ## Docs
 
 - [Protocol](docs/protocol.md): endpoints, hosts, the Xbox services split
+- [Mojang session](docs/mojang-session.md): signaling + TURN plan
 - [Evidence](docs/evidence.md): captures, traces and what is confirmed
 - [Deploy](docs/deploy.md): build, ports, environment, quadlet and Traefik
 - [Notes](docs/notes.md): scope, status, design rationale, ground rules

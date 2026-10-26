@@ -3,6 +3,12 @@
 Generated from git history on 2026-09-15. `git log` stays the source
 of truth; this file is the readable summary.
 
+## Unreleased
+
+- docs: ground `docs/protocol.md` and `docs/evidence.md` in the 2026-10-26
+  static recon of the Switch v0 build (`01006C100EC08000`); new
+  `docs/mojang-session.md` with the signaling + TURN plan.
+
 ## History — no releases tagged yet
 
 - chore: drop the empty module; go test ./... exits 1 with no packages [41606ab]
