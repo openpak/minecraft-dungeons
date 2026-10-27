@@ -19,3 +19,18 @@ Observed in binary strings (`main` + `subsdk0` + `sdk`):
 
 No runtime capture exists yet. Raw dumps, strings and notes stay outside this
 repository.
+
+## Recovered values (2026-10-27, static)
+
+- Xbox TitleId `0x67ACC3CD` = 1739551181 (movz/movk-built at
+  `0x2f967e0`/`0x2f967e4` into the Xbox init struct consumed by
+  `XblInitialize` at `0x2f96be4`; cross-checked at `0x2f89c48` in
+  the Friends path). Sandbox `RETAIL`.
+- SCID `00000000-0000-0000-0000-000067acc3cd` (rodata VA `0x5727685`;
+  consumed by `XblInitialize` args at `0x2f96be4`,
+  `XblMultiplayerSetActivityAsync` at `0x2f7c008`, `[FindLobbies]`
+  at `0x2f781c4`). Zero-prefix + titleId-tail shape fits Mojang
+  identity-only XBL use; confirm the exact wire value on XSTS
+  capture.
+- PlayFab VERIFIED ABSENT (no SDK linked; pak hits are allowlist +
+  stale uplugin text only, no TitleId). No PlayFab work needed.
