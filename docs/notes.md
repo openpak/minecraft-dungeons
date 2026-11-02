@@ -5,11 +5,10 @@
 Research on what an OpenPak replacement for **Minecraft Dungeons** online play
 on Nintendo Switch would have to be.
 
-## Status snapshot
+## Service shape
 
-**Status (2026-10-24): traffic-first service, not deployed.** `cmd/dungeonsd`
-serves the game's own online services while their shapes are learned from the
-game's traffic:
+`cmd/dungeonsd` serves the game's own online services while their shapes are learned from the
+game's traffic.
 
 ## The finding
 
