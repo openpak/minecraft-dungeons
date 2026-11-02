@@ -39,12 +39,12 @@ go run ./cmd/dungeonsd
 
 - [Protocol](docs/protocol.md): endpoints, hosts, the Xbox services split
 - [Mojang session](docs/mojang-session.md): signaling + TURN plan
-- [Evidence](docs/evidence.md): captures, traces and what is confirmed
 - [Deploy](docs/deploy.md): build, ports, environment, quadlet and Traefik
-- [Notes](docs/notes.md): scope, status, design rationale, ground rules
 - [Design](docs/design.md): network stack, feasibility and scope study
 - [Evidence needed](docs/evidence-needed.md): captures still required
 - [Harbor test plan](docs/harbor-test-plan.md): test runs against the game's traffic
+
+PRDs: openpak/prds (private)
 
 Live compatibility status: [openpak.org/titles#t-22](https://openpak.org/titles#t-22).
 
