@@ -3,11 +3,12 @@
 Generated from git history on 2026-09-15. `git log` stays the source
 of truth; this file is the readable summary.
 
-## Unreleased: release workflow and container build
+## v0.1.0 — 2026-11-02
+
+- Release workflow publishing to ghcr.io; replaces the hand-built production image.
 
 - Add a release workflow publishing the image to ghcr.io on v*.*.* tags.
 
-## Unreleased
 
 - docs: ground `docs/protocol.md` and `docs/evidence.md` in the 2026-10-26
   static recon of the Switch v0 build (`01006C100EC08000`); new
